@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Routing;
 
 namespace PMS1Web.Controllers
 {
+    [Route("home")]
     public class HomeController : Controller
     {
+        [HttpGet("/")]
         public ActionResult Index()
         {
             return View();
