@@ -1,0 +1,25 @@
+﻿@{ 
+    var title = "Add New Drug";
+    ViewBag.Title = title;
+}
+
+<h3>@title</h3>
+
+<form asp-action="create" asp-controller="drug" method="post" class="needs-validation" novalidate>
+    <div class="form-group row">
+        <label for="drug-name" class="col-md-2 col-form-label">Drug name</label>
+        <div class="col-md-8 col-lg-5">
+            <input id="drug-name" type="text" name="Name" class="form-control" required>
+            <div class="invalid-tooltip"></div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="drug-price" class="col-md-2 col-form-label">Price</label>
+        <div class="col-md-8 col-lg-5">
+            <input id="drug-price" type="number" name="Price" class="form-control" required>
+            <div class="invalid-tooltip"></div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Create Drug</button>
+</form>

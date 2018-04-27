@@ -7,7 +7,7 @@ namespace PMS1Web.Controllers
     public class HomeController : Controller
     {
         [HttpGet("/")]
-        public ActionResult Index()
+        public ActionResult Create()
         {
             return View();
         }
