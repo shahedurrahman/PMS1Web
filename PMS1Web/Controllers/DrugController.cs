@@ -16,12 +16,5 @@ namespace PMS1Web.Controllers
         {
             return View();
         }
-
-        [Route("create")]
-        [HttpPost]
-        public Action Create(Drug model)
-        {
-            return null;
-        }
     }
 }
