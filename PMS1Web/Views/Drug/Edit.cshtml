@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Modify A Drug";
+}
+
+<div id="DrugController">
+
+	<h3>@ViewBag.Title</h3>
+
+	<form method="post" class="needs-validation" novalidate>
+		<div class="form-group row">
+			<label for="drug-name" class="col-md-2 col-form-label">Drug name</label>
+			<div class="col-md-8 col-lg-5">
+				<input id="drug-name" type="text" name="Name" class="form-control" required v-model="Drug.Name" />
+				<div class="invalid-tooltip"></div>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="drug-price" class="col-md-2 col-form-label">Price</label>
+			<div class="col-md-8 col-lg-5">
+				<input id="drug-price" type="number" name="Price" class="form-control" required v-model="Drug.Price" />
+				<div class="invalid-tooltip"></div>
+			</div>
+		</div>
+
+		<button class="btn btn-primary" type="submit" v-on:click.prevent="editDrug">Save</button>
+	</form>
+</div>
+
+@section Scripts {
+<script type="text/javascript" src="~/js/DrugController.js"></script>
+}

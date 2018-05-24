@@ -16,5 +16,20 @@ namespace PMS1Web.Controllers
         {
             return View();
         }
-    }
+
+		[Route("edit")]
+
+		[HttpGet]
+		public ActionResult Edit(int id)
+		{
+			return View();
+		}
+
+		[Route("index")]
+		[HttpGet]
+		public ActionResult Index()
+		{
+			return View();
+		}
+	}
 }

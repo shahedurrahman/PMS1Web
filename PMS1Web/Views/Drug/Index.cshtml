@@ -1,0 +1,37 @@
+﻿@{
+	ViewBag.Title = "Drugs";
+}
+
+<div id="DrugController">
+	<h3>@ViewBag.Title</h3>
+
+	<div class="container">
+		<div class="row">
+			<div class="col"><a asp-action="create">Add New Drug</a></div>
+			<div class="col"></div>
+			<div class="col"></div>
+		</div>
+		<div class="row">
+			<div class="col border-bottom font-weight-bold">Name</div>
+			<div class="col border-bottom font-weight-bold">Price</div>
+			<div class="col border-bottom"></div>
+		</div>
+		<div class="row" v-for="drug in DrugList">
+			<div class="col">{{drug.name}}</div>
+			<div class="col">{{drug.price}}</div>
+			<div class="col">
+				<a v-bind:href="'/@ViewContext.RouteData.Values["controller"]/edit/' + drug.drugId">Edit</a>
+			</div>
+		</div>
+	</div>
+
+	<hr />
+	<list-data
+		v-for="item in DrugList"
+		v-bind:item="item"
+		v-bind:key="item.drugId"></list-data>
+</div>
+
+@section Scripts {
+	<script type="text/javascript" src="~/js/DrugController.js"></script>
+}

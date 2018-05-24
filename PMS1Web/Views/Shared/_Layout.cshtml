@@ -17,10 +17,10 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" asp-controller="drug" asp-action="index">Drugs <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu-1</a>
+                        <a class="nav-link" asp-controller="order" asp-action="index">Orders</a>
                     </li>
                 </ul>
             </div>
@@ -37,7 +37,7 @@
                     <button class="btn btn-light">Item 2</button>
                 </div>
             </div>
-            <div class="offset-md-1 col-md-10">
+            <div class="offset-md-1 col-md-10" style="margin-top:20px;">
                 <main>@RenderBody()</main>
             </div>
         </div>
@@ -50,6 +50,7 @@
         <script src="~/lib/popperjs-1.14.3/umd/popper.min.js"></script>
         <script src="~/lib/bootstrap-4.1/js/bootstrap.min.js"></script>
         <script src="~/lib/vuejs-2.5.16/vue.js"></script>
+		<script src="~/js/vue-components.js"></script>
         <script>
             $(document).ready(function () {
                 // set .active class to clicked item

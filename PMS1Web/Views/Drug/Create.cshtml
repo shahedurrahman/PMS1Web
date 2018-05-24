@@ -1,13 +1,12 @@
-﻿@{ 
-    var title = "Add New Drug";
-    ViewBag.Title = title;
+﻿@{
+    ViewBag.Title = "Add New Drug";
 }
 
 <div id="DrugController">
 
-    <h3>@title</h3>
+    <h3>@ViewBag.Title</h3>
 
-    <form asp-controller="Drug" asp-action="Create" method="post" class="needs-validation" novalidate>
+    <form method="post" class="needs-validation" novalidate>
         <div class="form-group row">
             <label for="drug-name" class="col-md-2 col-form-label">Drug name</label>
             <div class="col-md-8 col-lg-5">
@@ -23,9 +22,10 @@
             </div>
         </div>
 
-        <button class="btn btn-primary" type="submit" v-on:click.prevent="SaveDrug">Save</button>
+        <button class="btn btn-primary" type="submit" v-on:click.prevent="saveDrug">Save</button>
     </form>
 </div>
+
 @section Scripts {
     <script type="text/javascript" src="~/js/DrugController.js"></script>
 }
