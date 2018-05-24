@@ -17,7 +17,7 @@ namespace PMS1Web.Controllers
             return View();
         }
 
-		[Route("edit")]
+		[Route("edit/{id:int}")]
 
 		[HttpGet]
 		public ActionResult Edit(int id)

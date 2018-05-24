@@ -5,6 +5,12 @@
 <div id="DrugController">
 	<h3>@ViewBag.Title</h3>
 
+	@*<list-data
+		v-for="item in DrugList"
+		v-bind:item="item"
+		v-bind:key="item.drugId"></list-data>
+	<hr />*@
+
 	<div class="container">
 		<div class="row">
 			<div class="col"><a asp-action="create">Add New Drug</a></div>
@@ -24,12 +30,6 @@
 			</div>
 		</div>
 	</div>
-
-	<hr />
-	<list-data
-		v-for="item in DrugList"
-		v-bind:item="item"
-		v-bind:key="item.drugId"></list-data>
 </div>
 
 @section Scripts {
